@@ -1,0 +1,16 @@
+version: '3'
+services:
+  fend:
+    image: fend-img
+    ports:
+      - "3000:3000"
+    depends_on:
+      - bend
+
+  bend:
+    image: bend-img
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_name=hung131119782002
+      - DB_password= 197872
